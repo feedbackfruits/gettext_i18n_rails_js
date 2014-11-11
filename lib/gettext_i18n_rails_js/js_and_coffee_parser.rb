@@ -64,7 +64,7 @@ module GettextI18nRailsJs
 
           [key, "#{file}:#{idx+1}"]
         end
-      end.inject(:+).compact
+      end.inject(:+).try(:compact) || []
     end
 
   end
